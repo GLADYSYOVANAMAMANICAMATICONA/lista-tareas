@@ -1,0 +1,17 @@
+#contenedor{
+  width: 90%;
+  padding: 10px;
+  border: 2px;
+  background: #0E99A2;
+  color: black;
+  font-family: cursive;
+  text-align: center;
+}
+
+#btnAgregarTarea{
+	background-color: transparent;
+	border-color: transparent;
+}
+#img3{
+	width: 50px; height: 50px;
+}
