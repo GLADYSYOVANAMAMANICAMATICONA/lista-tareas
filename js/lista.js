@@ -65,7 +65,7 @@ var nuevo="";
 for (var i = 0; i < arrayDeListaTareas.length; i++) {
   var tareasTitulo = arrayDeListaTareas[i].title;
   //if(==completed)
-  var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input id = '" + i + "'' input type='checkbox' onclick='check(this)'>"+"</li>"+"</div>";
+  var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+"<input  type='checkbox' onclick='check(this)'>"+"</li>"+"</div>";
   nuevo +=areaDondeMostrar;
 }
 document.getElementById("contenedorDeLista").innerHTML=nuevo;
