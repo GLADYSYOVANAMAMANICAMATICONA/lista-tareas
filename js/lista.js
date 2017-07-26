@@ -93,6 +93,7 @@ function agregarTarea(){
 
 
 
+
 function check(){
 inputs = getElementsByTagName("input");
 for(i=0 ; i<inputs.length ; i++){
