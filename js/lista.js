@@ -83,9 +83,3 @@ function agregarTarea(){
     areaMostrarLista();
   }
 
-
-  li.addEventListener("click", function(event) {
-    if (event.target.tagName === "LI") {
-      event.target.classList.toggle("checked");
-    }
-  }, false);
