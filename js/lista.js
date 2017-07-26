@@ -63,9 +63,10 @@ var arrayDeListaTareas = [{
 function areaMostrarLista(){
 var nuevo="";
 for (var i = 0; i < arrayDeListaTareas.length; i++) {
-var tareasTitulo = arrayDeListaTareas[i].title;
-var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input type='checkbox' onclick='check()'>"+"</li>"+"</div>";
-nuevo +=areaDondeMostrar;
+  var tareasTitulo = arrayDeListaTareas[i].title;
+  //if(==completed)
+  var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input id = '" + i + "'' input type='checkbox' onclick='check(this)'>"+"</li>"+"</div>";
+  nuevo +=areaDondeMostrar;
 }
 document.getElementById("contenedorDeLista").innerHTML=nuevo;
 }
@@ -81,24 +82,18 @@ function agregarTarea(){
   if (tituloDeTarea==="") {
     alert("Ingrese nueva trea");
   }else{
-  var nuevaTarea = new tareas(1,10,tituloDeTarea,true);
+  var nuevaTarea = new tareas(1,1,tituloDeTarea);
     arrayDeListaTareas.push(nuevaTarea);
     areaMostrarLista();
     document.getElementById("inputIngresarTarea").value="";
   }
+  console.log(arrayDeListaTareas)
+
 }
 
+function check (e) {
+  console.log (e.id);
+  arrayDeListaTareas[ parseInt (e.id) ].completed = true;
 
-
-
-
-
-
-function check(){
-inputs = getElementsByTagName("input");
-for(i=0 ; i<inputs.length ; i++){
-if(inputs[i].type=="checkbox" && inputs[i].checked==true){
-}
-}
-}
-
+  areaMostrarLista ();
+} 
