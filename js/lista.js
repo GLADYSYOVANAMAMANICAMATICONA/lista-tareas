@@ -64,7 +64,7 @@ function areaMostrarLista(){
 var s="";
 for (var i = 0; i < arrayDeListaTareas.length; i++) {
 var tareasTitulo = arrayDeListaTareas[i].title;
-var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input  name='int' type='checkbox' onclick='check()'>"+"</li>"+"</div>";
+var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input type='checkbox' onclick='check()'>"+"</li>"+"</div>";
 s +=areaDondeMostrar;
 }
 document.getElementById("contenedorDeLista").innerHTML=s;
@@ -87,6 +87,17 @@ function agregarTarea(){
     document.getElementById("inputIngresarTarea").value="";
   }
 }
-function check(){ 
-      alert(document.int.checked)
+
+
+
+
+
+
+function check(){
+inputs = getElementsByTagName("input");
+for(i=0 ; i<inputs.length ; i++){
+if(inputs[i].type=="checkbox" && inputs[i].checked==true){
 }
+}
+}
+
