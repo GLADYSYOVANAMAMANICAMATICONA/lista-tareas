@@ -61,13 +61,13 @@ var arrayDeListaTareas = [{
   }
 ];
 function areaMostrarLista(){
-var s="";
+var nuevo="";
 for (var i = 0; i < arrayDeListaTareas.length; i++) {
 var tareasTitulo = arrayDeListaTareas[i].title;
 var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input type='checkbox' onclick='check()'>"+"</li>"+"</div>";
-s +=areaDondeMostrar;
+nuevo +=areaDondeMostrar;
 }
-document.getElementById("contenedorDeLista").innerHTML=s;
+document.getElementById("contenedorDeLista").innerHTML=nuevo;
 }
 function tareas(userId,id,title,dni,completed){
   this.userId = userId;
