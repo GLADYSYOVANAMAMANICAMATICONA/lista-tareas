@@ -4,19 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Lista de Tarea</title>
 </head>
-<script src = js/lista.js></script>
-<link rel="stylesheet" type="text/css" href="css/lista.css"> 
+<link rel="stylesheet" type="text/css" href="css/lista.css">
 <body>
     <div id = "contenedor">
 
         <img src="img/2.gif" align="left">
         <h1>Lista de Tareas</h1>
-          <ul id = "ulListaTareas">                   
-          </ul>
-        <button id = "btnAgregarTarea"><img id="img3"src="img/3.png"></button>
-         
+				<input type="text" id="inputIngresarTarea" placeholder="Agrega una nueva tarea">
+				<button id = "btnAgregarTarea" onclick="agregarTarea()"><img id="img3"src="img/3.png"></button>
+				<div id="contenedorDeLista">
+				</div>
     </div>
 </body>
+<script src = "js/lista.js"></script>
 </html>
-       
-   
