@@ -64,28 +64,29 @@ function areaMostrarLista(){
 var s="";
 for (var i = 0; i < arrayDeListaTareas.length; i++) {
 var tareasTitulo = arrayDeListaTareas[i].title;
-var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+"       <button>Realizada</button>"+"            <button>Eliminar</button>"+"</li>"+"</div>";
+var areaDondeMostrar = "<div>"+"<li>"+tareasTitulo+" <input  name='int' type='checkbox' onclick='check()'>"+"</li>"+"</div>";
 s +=areaDondeMostrar;
 }
 document.getElementById("contenedorDeLista").innerHTML=s;
 }
 function tareas(userId,id,title,dni,completed){
-	this.userId = userId;
-	this.id = id;
-	this.title = title;
+  this.userId = userId;
+  this.id = id;
+  this.title = title;
   this.completed = completed
 };
 
 function agregarTarea(){
-	var tituloDeTarea=document.getElementById("inputIngresarTarea").value;
-	var nuevaTarea = new tareas(1,10,tituloDeTarea,true);
+  var tituloDeTarea=document.getElementById("inputIngresarTarea").value;
+  if (tituloDeTarea==="") {
+    alert("Ingrese nueva trea");
+  }else{
+  var nuevaTarea = new tareas(1,10,tituloDeTarea,true);
     arrayDeListaTareas.push(nuevaTarea);
     areaMostrarLista();
+    document.getElementById("inputIngresarTarea").value="";
   }
-
-
-  li.addEventListener("click", function(event) {
-    if (event.target.tagName === "LI") {
-      event.target.classList.toggle("checked");
-    }
-  }, false);
+}
+function check(){ 
+      alert(document.int.checked)
+}

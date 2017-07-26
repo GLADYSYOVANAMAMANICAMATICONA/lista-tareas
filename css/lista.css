@@ -6,6 +6,8 @@
   color: black;
   font-family: cursive;
   text-align: center;
+  margin-left: 15%;
+  width: 70%;
 }
 
 #btnAgregarTarea{
@@ -18,10 +20,7 @@
 #contenedorDeLista{
   text-align: left;
 }
+#contenedorDeLista li input{
+   text-decoration: line-through;
+   }
 
-
-
-li.contenedorDeLista {
-
- text-decoration: line-through;
-}
